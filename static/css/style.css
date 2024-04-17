@@ -1,0 +1,118 @@
+@font-face{font-family:text_navigation;
+    src: url(/web_project1/шрифт_тест.woff) format('woff');}
+
+@font-face{font-family:text_h1;
+    src: url(/web_project1/h1.woff) format('woff');}
+
+@font-face{font-family:text_list;
+    src: url(/web_project1/ZabavaHuE.woff) format('woff');}
+
+.container{width: 1600px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;}
+
+header{background-color: rgb(253, 246, 178);}
+
+nav li{display: inline;
+    margin: 0 20px;
+    font-size: 20px;
+    color: rgb(23, 34, 89)}
+
+nav li a{color: inherit;
+    text-decoration: unset;
+    font-family: text_navigation;}
+
+.lag2{position: relative;
+    top: -410px;}
+
+.main_part{background-color: rgb(255, 255, 255);
+    width: 1300px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.phone a{font-family: text_navigation;
+       color: inherit;
+       text-decoration: unset;
+       font-size: 30px
+}
+.phone{color: rgb(23, 34, 89)
+}
+h1{position: relative;
+    left:350px;
+    font-size: 50px;
+    font-family: text_h1;
+    color: rgb(23, 34, 89)}
+
+h2{font-size: 30px;
+   font-family: text_navigation;
+   color: rgb(23, 34, 89);}
+
+h4{font-size: 20px;
+   font-family: text_navigation;
+   color: rgb(23, 34, 89);
+   line-height: 30px
+   line-height: 10px}
+
+h5{font-size: 20px;
+    color: rgb(23, 34, 89)}
+    font-family: text_navigation;}
+
+p{font-size: 20px;
+   font-family: text_navigation;
+   color: rgb(23, 34, 89);
+   line-height: 25px}
+
+
+.button_about_us{
+    position: absolute;
+    top: 1400px;
+    left: 200px;
+    font-family: text_h1;
+    border: 2px solid #b8b174;
+    border-radius: 30px;
+    background: #faf1a0;
+    min-width: 260px;
+    min-height: 70px;
+    font-size: 30px;
+    cursor: pointer;}
+.button_about_us:hover {
+  background: rgb(255,255,255);
+  border: 2px solid #3254a8;
+}
+.button_about_us a{color: inherit;
+    text-decoration: unset;
+    font-family: text_h1;}
+h3{position: relative;
+    left:500px;
+    font-size: 60px;
+    font-family: text_h1;
+    color: rgb(23, 34, 89)}
+
+.olist1 li{font-size: 20px;
+    color: rgb(23, 34, 89)}
+    font-family: text_navigation;}
+
+p .one{font-size: 20px;
+    color: rgb(23, 34, 89)}
+    font-family: text_navigation;}
+.intens1{position: relative;
+    top: -250px;
+    left: 630px;}
+.olist2{position:absolute;
+    top:470px;
+    font-size: 20px;
+    color: rgb(168, 50, 58)}
+    font-family: text_navigation;
+    line-height: 15px;
+}
+.olist3{font-size: 20px;
+    color: rgb(23, 34, 89)}
+    font-family: text_navigation;}
+.olist3 li{display: inline;
+    margin: 0 20px;
+    font-size: 20px;
+    color: rgb(23, 34, 89)}
+
+h6{font-family: text_list;}
