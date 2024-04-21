@@ -1,42 +1,6 @@
-<!DOCTYPE html>
-<html lang="rus">
-<head>
-    <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1.0">
-    <meta content="description" name="Занятия для детей школьного и дошкольного возраста. А также частный детский сад и городской лагерь.">
-    <title>Главная</title>
-    <link rel="stylesheet" href="./static/css/style.css">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <a href="site.html">
-                <img src="./static/img/logo_осьминожки.png" alt="логотип">
-                </a>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="about_us.html">О нас</a></li>
-                    <li><a href="preschoolers.html">Дошкольники</a></li>
-                    <li><a href="junior_schoolchildren.html">Младшие школьники</a></li>
-                    <li><a href="zero_class.html">Нулевой класс</a></li>
-                </ul>
-                <ul>
-                    <li><a href="part-time.html">Группа неполного дня</a></li>
-                    <li><a href="intensives.html">Интенсивы</a></li>
-                    <li><a href="contacts.html">Контакты</a></li>
-                </ul>
-            </nav>
-            <div class="phone">
-                <a href="#">+7(915)300-35-95</a>
-            </div>
-        </div>
-        <div class="photos1">
-            <img src="./static/img/ла1.png" alt="летний лагерь">
-            <img class="lag2" src="./static/img/ла2.png" alt="летний лагерь2">
-        </div>
-    </header>
+{% extends 'base_template.html' %}
+
+{% block content %}
     <section class="main_part">
         <h1>О детском клубе</h1>
         <h2>Детский клуб «Осьминожки» –</h2>
@@ -56,7 +20,7 @@
             необыкновенный мир. Проживаем каждый новый день вместе со всеми,<br>
             кто приходит в детский клуб «Осьминожки». Готовы к чудесам?<br>
             Приходите, мы ждем вас.</p>
-        <img src="фото_фасад.png" alt="фото фасад" width="550" style="position: absolute;
+        <img src="./static/img/фото_фасад.png" alt="фото фасад" width="550" style="position: absolute;
     top: 800px;
     left: 770px;">
         <button class="button_about_us">
@@ -96,23 +60,10 @@ osminozhki-club@mail.ru
     </section>
     <section style="position:absolute; top:2380px">
         <a href="https://t.me/osminozhki">
-            <img src="tg.png" alt="дошколята" style="width:50px; position:absolute; left:250px">
+            <img src="./static/img/tg.png" alt="дошколята" style="width:50px; position:absolute; left:250px">
         </a>
         <a href="https://vk.com/clubosminozhki">
-            <img src="vk.png" alt="дошколята" style="width:50px; position:absolute; left:180px">
+            <img src="./static/img/vk.png" alt="дошколята" style="width:50px; position:absolute; left:180px">
         </a>
     </section>
-
-    <footer style="position:absolute; top:2600px">
-        <p style="position:absolute; top:20px; left:600px">+7 (496) 615-15-15<br>
-+7 (496) 613-20-86<br>
-+7 (915) 300-35-95<br>
-osminozhki-club@mail.ru<br>
-Все права защищены<br>
-© 2013 — 2024.<br>
-Детский клуб «Осьминожки»</p>
-        <img src="./static/img/bottom.png">
-        <img src="./static/img/осм.png" width="450px">
-    </footer>
-</body>
-</html>
+{% endblock %}

@@ -1,38 +1,6 @@
-<!DOCTYPE html>
-<html lang="rus">
-<head>
-    <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1.0">
-    <meta content="description" name="Занятия для детей школьного и дошкольного возраста. А также частный детский сад и городской лагерь.">
-    <title>Младшие школьники</title>
-    <link rel="stylesheet" href="./static/css/style.css">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <a href="site.html">
-                <img src="./static/img/logo_осьминожки.png" alt="логотип">
-                </a>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="about_us.html">О нас</a></li>
-                    <li><a href="preschoolers.html">Дошкольники</a></li>
-                    <li><a href="junior_schoolchildren.html">Младшие школьники</a></li>
-                    <li><a href="zero_class.html">Нулевой класс</a></li>
-                </ul>
-                <ul>
-                    <li><a href="part-time.html">Группа неполного дня</a></li>
-                    <li><a href="intensives.html">Интенсивы</a></li>
-                    <li><a href="contacts.html">Контакты</a></li>
-                </ul>
-            </nav>
-            <div class="phone">
-                <a href="#">+7(915)300-35-95</a>
-            </div>
-        </div>
-    </header>
+{% extends 'base_template.html' %}
+
+{% block content %}
     <sector class="main_part" style="position:absolute;top:200px;">
         <h1 style="position:absolute;left:500px; top:-70px">Английский язык</h1>
          <h4>Что мы предлагаем:</h4>
@@ -54,13 +22,13 @@
     <sector style="position:absolute; top:570px">
         <ul style="display: flex;justify-content: space-between;">
             <li style="display: inline; margin: 0 40px;">
-                <img src="англ1.jpeg" alt="дошколята" style="width:350px;">
+                <img src="./static/img/англ1.jpeg" alt="дошколята" style="width:350px;">
             </li>
             <li style="display: inline; margin: 0 40px;">
-                <img src="англ2.jpeg" alt="дошколята" style="width:350px;">
+                <img src="./static/img/англ2.jpeg" alt="дошколята" style="width:350px;">
             </li>
             <li style="display: inline; margin: 0 40px;">
-                <img src="англ3.jpeg" alt="дошколята" style="width:350px;">
+                <img src="./static/img/англ3.jpeg" alt="дошколята" style="width:350px;">
             </li>
         </ul>
         <h1 style="position:absolute;left:470px;">Результат обучения</h1>
@@ -77,16 +45,4 @@
             <li>Море впечатлений, позитива и много новых друзей.</li>
         </ul>
     </sector>
-    <footer style="position:absolute; top:1500px">
-        <p style="position:absolute; top:20px; left:600px">+7 (496) 615-15-15<br>
-+7 (496) 613-20-86<br>
-+7 (915) 300-35-95<br>
-osminozhki-club@mail.ru<br>
-Все права защищены<br>
-© 2013 — 2024.<br>
-Детский клуб «Осьминожки»</p>
-        <img src="./static/img/bottom.png">
-        <img src="./static/img/осм.png" width="450px">
-    </footer>
-</body>
-</html>
+{% endblock %}

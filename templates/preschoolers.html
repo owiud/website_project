@@ -1,44 +1,11 @@
-<!DOCTYPE html>
-<html lang="rus">
-<head>
-    <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1.0">
-    <meta content="description"
-          name="Занятия для детей школьного и дошкольного возраста. А также частный детский сад и городской лагерь.">
-    <title>Дошкольники</title>
-    <link rel="stylesheet" href="./static/css/style.css">
-</head>
-<body>
-<header>
-    <div class="container">
-        <div class="logo">
-                <a href="site.html">
-                <img src="./static/img/logo_осьминожки.png" alt="логотип">
-                </a>
-            </div>
-        <nav>
-            <ul>
-                <li><a href="about_us.html">О нас</a></li>
-                <li><a href="preschoolers.html">Дошкольники</a></li>
-                <li><a href="junior_schoolchildren.html">Младшие школьники</a></li>
-                <li><a href="zero_class.html">Нулевой класс</a></li>
-            </ul>
-            <ul>
-                <li><a href="part-time.html">Группа неполного дня</a></li>
-                <li><a href="intensives.html">Интенсивы</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
-            </ul>
-        </nav>
-        <div class="phone">
-            <a href="#">+7(915)300-35-95</a>
-        </div>
-    </div>
-</header>
+{% extends 'base_template.html' %}
+
+{% block content %}
 <section class="main_part">
     <h1>Комплексное развитие</h1>
     <h4>«Комплексное развитие» 4-5 лет включает в себя изучение детьми<br>
         окружающего мира:</h4>
-    <ol class="olist1" style="list-style-image: url(нумерация1.png); line-height: 50px;">
+    <ol class="olist1" style="list-style-image: url(./static/img/нумерация1.png); line-height: 50px;">
         <li>Фрукты, овощи, грибы, ягоды</li>
         <li>Деревья</li>
         <li>Сад-огород</li>
@@ -51,8 +18,8 @@
         <li>Инструменты</li>
         <li>Транспрот</li>
     </ol>
-    <img src="дошколята4.jpeg" alt="дошколята" style="position:absolute; top:500px; left:550px; width:400px">
-    <img src="дошколята3.jpeg" alt="дошколята" style="position:absolute; top:300px; left:850px; width:500px">
+    <img src="./static/img/дошколята4.jpeg" alt="дошколята" style="position:absolute; top:500px; left:550px; width:400px">
+    <img src="./static/img/дошколята3.jpeg" alt="дошколята" style="position:absolute; top:300px; left:850px; width:500px">
 </section>
 <section>
     <h1 style="font-size:40px; position: relative;left:500px;">Уникальная программа</h1>
@@ -145,16 +112,4 @@
     width: 400px;">
 
 </section>
-<footer style="position:absolute; top:2600px">
-        <p style="position:absolute; top:20px; left:600px">+7 (496) 615-15-15<br>
-+7 (496) 613-20-86<br>
-+7 (915) 300-35-95<br>
-osminozhki-club@mail.ru<br>
-Все права защищены<br>
-© 2013 — 2024.<br>
-Детский клуб «Осьминожки»</p>
-        <img src="./static/img/bottom.png">
-        <img src="./static/img/осм.png" width="450px">
-    </footer>
-</body>
-</html>
+{% endblock %}
