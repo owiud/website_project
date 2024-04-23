@@ -1,11 +1,37 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, flash, redirect, url_for
+from flask_login import login_user, LoginManager, login_required
+from flask_migrate import Migrate
+from flask_sqlalchemy import SQLAlchemy
+from werkzeug.security import generate_password_hash, check_password_hash
+
+from config import Config
+from forms import LoginForm
+from models import *
 
 app = Flask(__name__)
+
+login_manager = LoginManager()
+app.config.from_object(Config)
+
+app.config.from_object(Config)
+db = SQLAlchemy(app)
+migrate = Migrate(app, db)
+
+
+@login_manager.user_loader
+def loader_user(user_id):
+    return Users.query.get(user_id)
 
 
 @app.route("/")
 def main_page():
     return render_template('site.html')
+
+
+@app.route("/admin")
+@login_required
+def admin_page():
+    return render_template("admin.html")
 
 
 @app.route("/rules")
@@ -118,11 +144,6 @@ def preschool_courses_page():
     return render_template('preschoolers.html')
 
 
-@app.route("/reviews")
-def reviews_page():
-    return render_template('reviews.html')
-
-
 @app.route("/class_zero")
 def class_zero_page():
     return render_template('reviews.html')
@@ -131,6 +152,54 @@ def class_zero_page():
 @app.route("/schedule")
 def schedule_page():
     return render_template('schedule.html')
+
+
+@app.route('/user/add', methods=['GET', 'POST'])
+def add_user():
+    name = None
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = Users.query.filter_by(email=form.name_and_surname.data).first()
+        if user is None:
+            hashed_pw = generate_password_hash(form.password.data, "sha256")
+            user = Users(name_and_surname=form.name_and_surname.data, phone_number=form.phone_number.data,
+                         password_hash=hashed_pw)
+            db.session.add(user)
+            db.session.commit()
+        name = form.name_and_surname.data
+        form.name_and_surname.data = ''
+        form.phone_number.data = ''
+        form.password.data = ''
+
+        flash("User Added Successfully!")
+    our_users = Users.query.order_by(Users.date_added)
+    return render_template("add_user.html",
+                           form=form,
+                           name=name,
+                           our_users=our_users)
+
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = Users.query.filter_by(username=form.name_and_surname.data).first()
+        if user:
+            if check_password_hash(user.password_hash, form.password.data):
+                login_user(user)
+                flash("Login Succesfull!!")
+                return redirect(url_for('/'))
+            else:
+                flash("Wrong Password - Try Again!")
+        else:
+            flash("That User Doesn't Exist! Try Again...")
+
+    return render_template('login.html', form=form)
+
+
+@app.errorhandler(404)
+def page_not_found():
+    return render_template("404.html"), 404
 
 
 if __name__ == '__main__':

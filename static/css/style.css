@@ -1,7 +1,16 @@
+@font-face {
+  font-family: text_h1;
+  font-style: normal;
+  font-weight: normal;
+  /* Браузер сначала попробует найти шрифт локально */
+  src: local("h1"),
+       /* Если не получилось, загрузит woff2 */
+       url(../fonts/h1.woff) format("woff"),
+}
 
 @font-face {
     font-family:text_navigation;
-    src: url(fonts/шрифт_тест.woff) format('woff');
+    src: url(fonts/Oswald-VariableFont_wght.ttf) format('woff');
 }
 
 @font-face {
@@ -14,17 +23,15 @@
     src: url(fonts/ZabavaHuE.woff) format('woff');
 }
 
-.container {
-    position: relative;
-    text-align: center;
-    display: flex;
-}
 
 .page {
     display: flex;
     text-align: center;
     padding: 10px;
+    position: relative;
+    z-index: 999;
 }
+
 
 header {
     position: relative;
@@ -74,6 +81,7 @@ nav li a {
     background-color: white;
     text-align: center;
     margin: 0 auto;
+    width: 80%;
 
   h1 {
     position: relative;
@@ -85,6 +93,14 @@ nav li a {
 
 h2 {
     font-size: 30px;
+    font-family: text_h1;
+    color: rgb(23, 34, 89);
+}
+
+h3 {
+    position: relative;
+    left:500px;
+    font-size: 60px;
     font-family: text_h1;
     color: rgb(23, 34, 89);
 }
@@ -102,6 +118,16 @@ h5 {
     color: rgb(23, 34, 89)}
     font-family: text_h1;
 }
+
+p {
+    font-size: 20px;
+    font-family: text_navigation;
+    color: rgb(23, 34, 89);
+    line-height: 25px;
+}
+
+}
+
 }
 .button_about_us {
     position: absolute;
@@ -128,13 +154,6 @@ h5 {
     font-family: text_h1;
 }
 
-h3 {
-    position: relative;
-    left:500px;
-    font-size: 60px;
-    font-family: text_h1;
-    color: rgb(23, 34, 89);
-}
 
 .olist1 li {
     font-size: 20px;
