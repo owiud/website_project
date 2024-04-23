@@ -1,71 +1,109 @@
-@font-face{font-family:text_navigation;
-    src: url(/web_project1/шрифт_тест.woff) format('woff');}
 
-@font-face{font-family:text_h1;
-    src: url(/web_project1/h1.woff) format('woff');}
+@font-face {
+    font-family:text_navigation;
+    src: url(fonts/шрифт_тест.woff) format('woff');
+}
 
-@font-face{font-family:text_list;
-    src: url(/web_project1/ZabavaHuE.woff) format('woff');}
+@font-face {
+    font-family:text_h1;
+    src: url(fonts/h1.woff) format('woff');
+}
 
-.container{width: 1600px;
-    max-width: 100%;
-    margin: 0 auto;
+@font-face {
+    font-family:text_list;
+    src: url(fonts/ZabavaHuE.woff) format('woff');
+}
+
+.container {
+    position: relative;
+    text-align: center;
     display: flex;
-    justify-content: space-between;}
+}
 
-header{background-color: rgb(253, 246, 178);}
+.page {
+    display: flex;
+    text-align: center;
+    padding: 10px;
+}
 
-nav li{display: inline;
-    margin: 0 20px;
+header {
+    position: relative;
+    z-index: 999;
+    background-color: rgb(253, 246, 178);
+    width: 100%;
+    text-align: center;
+}
+
+header nav ul li {
+    display: block;
+    position: relative;
+    text-align: center;
+}
+
+header nav ul li a {
+    display: block;
+    position: relative;
+    text-align: center;
+}
+
+header nav ul li ul {
+    display: block;
+    position: absolute;
+    text-align: center;
+}
+
+nav li {
+    display: block;
     font-size: 20px;
-    color: rgb(23, 34, 89)}
+    color: rgb(23, 34, 89);
+    text-align: center;
+}
 
-nav li a{color: inherit;
+nav li a {
+    color: inherit;
     text-decoration: unset;
-    font-family: text_navigation;}
+    font-family: "Arial";
+    text-align: center;
+}
 
-.lag2{position: relative;
-    top: -410px;}
+.lag2 {
+    position: relative;
+}
 
-.main_part{background-color: rgb(255, 255, 255);
-    width: 1300px;
-    max-width: 100%;
+.main_part {
+    background-color: white;
+    text-align: center;
     margin: 0 auto;
-}
-.phone a{font-family: text_navigation;
-       color: inherit;
-       text-decoration: unset;
-       font-size: 30px
-}
-.phone{color: rgb(23, 34, 89)
-}
-h1{position: relative;
-    left:350px;
+
+  h1 {
+    position: relative;
+    text-align: center;
     font-size: 50px;
     font-family: text_h1;
+    color: rgb(23, 34, 89);
+  }
+
+h2 {
+    font-size: 30px;
+    font-family: text_h1;
+    color: rgb(23, 34, 89);
+}
+
+h4 {
+    font-size: 20px;
+    font-family: text_h1;
+    color: rgb(23, 34, 89);
+    line-height: 30px
+    line-height: 10px;
+}
+
+h5 {
+    font-size: 20px;
     color: rgb(23, 34, 89)}
-
-h2{font-size: 30px;
-   font-family: text_navigation;
-   color: rgb(23, 34, 89);}
-
-h4{font-size: 20px;
-   font-family: text_navigation;
-   color: rgb(23, 34, 89);
-   line-height: 30px
-   line-height: 10px}
-
-h5{font-size: 20px;
-    color: rgb(23, 34, 89)}
-    font-family: text_navigation;}
-
-p{font-size: 20px;
-   font-family: text_navigation;
-   color: rgb(23, 34, 89);
-   line-height: 25px}
-
-
-.button_about_us{
+    font-family: text_h1;
+}
+}
+.button_about_us {
     position: absolute;
     top: 1400px;
     left: 200px;
@@ -76,43 +114,185 @@ p{font-size: 20px;
     min-width: 260px;
     min-height: 70px;
     font-size: 30px;
-    cursor: pointer;}
+    cursor: pointer;
+}
+
 .button_about_us:hover {
   background: rgb(255,255,255);
   border: 2px solid #3254a8;
 }
-.button_about_us a{color: inherit;
+
+.button_about_us a {
+    color: inherit;
     text-decoration: unset;
-    font-family: text_h1;}
-h3{position: relative;
+    font-family: text_h1;
+}
+
+h3 {
+    position: relative;
     left:500px;
     font-size: 60px;
     font-family: text_h1;
-    color: rgb(23, 34, 89)}
+    color: rgb(23, 34, 89);
+}
 
-.olist1 li{font-size: 20px;
+.olist1 li {
+    font-size: 20px;
     color: rgb(23, 34, 89)}
-    font-family: text_navigation;}
+    font-family: text_navigation;
+}
 
-p .one{font-size: 20px;
+p .one {
+    font-size: 20px;
     color: rgb(23, 34, 89)}
-    font-family: text_navigation;}
-.intens1{position: relative;
-    top: -250px;
-    left: 630px;}
-.olist2{position:absolute;
+    font-family: text_navigation;
+}
+
+.intens1 {
+    position: relative;
+    margin: 0 auto;
+}
+
+.olist2 {
+    position:absolute;
     top:470px;
     font-size: 20px;
     color: rgb(168, 50, 58)}
     font-family: text_navigation;
     line-height: 15px;
 }
-.olist3{font-size: 20px;
-    color: rgb(23, 34, 89)}
-    font-family: text_navigation;}
-.olist3 li{display: inline;
-    margin: 0 20px;
+
+.olist3 {
     font-size: 20px;
     color: rgb(23, 34, 89)}
+    font-family: "Arial";
+}
 
-h6{font-family: text_list;}
+.olist3 li {
+    display: inline;
+    margin: 0 auto;
+    font-size: 20px;
+    color: rgb(23, 34, 89);
+}
+
+h6 {
+    font-family: "Arial";
+}
+
+
+.navbar {
+    background-color: rgb(253, 246, 178);
+    position: relative;
+    z-index: 999;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    background: rgb(253, 246, 178);
+}
+
+.navbar li {
+	display: inline-block;
+}
+
+.navbar li a {
+	color: #191970;
+	display: block;
+	padding: 10px 20px;
+	text-decoration: none;
+	font-family: "Arial";
+	font-weight: bold;
+}
+
+.navbar ul ul {
+	position: absolute;
+	top: 100%;
+	display: none;
+	z-index: 99;
+}
+
+.navbar ul ul li {
+	display: block;
+	z-index: 99;
+}
+
+.navbar li:hover ul {
+	display: block;
+	z-index: 99;
+}
+
+.navbar ul ul li a:hover {
+	background-color: #F0E68C;
+	z-index:99;
+}
+
+
+nav.navbar ul li a,
+nav.fill ul li a {
+  position: relative;
+}
+
+nav.navbar ul li a:after,
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #333;
+  height: 1px;
+}
+
+nav.navbar ul li a:hover:after {
+  width: 100%;
+}
+
+.header__img {
+    height: 100px;
+    width: 150px;
+}
+
+.yandex-reviews{
+    display: flex;
+    margin: 0 auto;
+}
+
+h1 {
+    position: relative;
+    text-align: center;
+    font-size: 50px;
+    font-family: text_h1;
+    color: rgb(23, 34, 89);
+  }
+
+h2 {
+    font-size: 30px;
+    font-family: text_h1;
+    color: rgb(23, 34, 89);
+}
+
+h4 {
+    font-size: 20px;
+    font-family: text_h1;
+    color: rgb(23, 34, 89);
+    line-height: 30px
+    line-height: 10px;
+}
+
+h5 {
+    font-size: 20px;
+    color: rgb(23, 34, 89)}
+    font-family: text_h1;
+}
+
+p {
+    font-size: 20px;
+    font-family: text_navigation;
+    color: rgb(23, 34, 89);
+    line-height: 25px;
+}
