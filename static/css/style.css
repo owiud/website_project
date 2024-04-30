@@ -1,11 +1,6 @@
 @font-face {
-  font-family: text_h1;
-  font-style: normal;
-  font-weight: normal;
-  /* Браузер сначала попробует найти шрифт локально */
-  src: local("h1"),
-       /* Если не получилось, загрузит woff2 */
-       url(../fonts/h1.woff) format("woff"),
+    font-family: "Parabola";
+    src: url(fonts/Parabola.ttf) format('ttf');
 }
 
 @font-face {
